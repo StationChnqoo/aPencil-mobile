@@ -36,7 +36,7 @@ const FilterModal: React.FC<MyProps> = props => {
     );
   };
 
-  const onTagPress = (index: i) => {
+  const onTagPress = (index: number) => {
     let datas = [...tags];
     datas[index].checked = !datas[index].checked;
     setTags([...datas]);
@@ -80,14 +80,14 @@ const FilterModal: React.FC<MyProps> = props => {
                 DateTimePicker;
               }}>
               <Text>选择开始时间</Text>
-              {/* <DateTimePicker
-                display={'spinner'}
+              <DateTimePicker
+                display={'inline'}
                 testID="dateTimePicker"
                 value={new Date()}
                 mode={'date'}
                 // is24Hour={true}
                 onChange={undefined}
-              /> */}
+              />
             </TouchableOpacity>
           </Grouper>
         </ScrollView>

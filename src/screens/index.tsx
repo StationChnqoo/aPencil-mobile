@@ -17,6 +17,7 @@ import Webviewer from './Webviewer';
 import Settings from './Settings';
 import Welcome from './Welcome';
 import PdfViewer from './PdfViewer';
+import NotesFilter from './NotesFilter';
 
 export type RootStacksParams = {
   Main: undefined;
@@ -26,6 +27,7 @@ export type RootStacksParams = {
   PdfViewer: {title: string; url: string};
   Settings: undefined;
   Welcome: undefined;
+  NotesFilter: undefined;
 };
 
 const RootStack = createNativeStackNavigator<RootStacksParams>();
@@ -68,7 +70,7 @@ export default function Stacks() {
           component={Webviewer}
           options={{freezeOnBlur: true}}
         />
-         <RootStack.Screen
+        <RootStack.Screen
           name="PdfViewer"
           component={PdfViewer}
           options={{freezeOnBlur: true}}
@@ -77,6 +79,11 @@ export default function Stacks() {
           name="Settings"
           component={Settings}
           options={{freezeOnBlur: true}}
+        />
+        <RootStack.Screen
+          name="NotesFilter"
+          component={NotesFilter}
+          options={{freezeOnBlur: true, animation: 'slide_from_right'}}
         />
       </RootStack.Navigator>
     </NavigationContainer>

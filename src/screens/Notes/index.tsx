@@ -14,6 +14,7 @@ const Notes: React.FC<MyProps> = props => {
   const [keyword, setKeyword] = useState('');
   const [filterStatus, setFilterStatus] = useState(false);
   const [filters, setFilters] = useState([]);
+  const {navigation} = props;
   const [isShowFilterModal, setIsShowFilterModal] = useState(false);
 
   return (
@@ -24,7 +25,8 @@ const Notes: React.FC<MyProps> = props => {
       <SearchBar
         onFilterPress={() => {
           setFilterStatus(!filterStatus);
-          setIsShowFilterModal(true);
+          // setIsShowFilterModal(true);
+          navigation.navigate('NotesFilter');
         }}
         onSearchPress={() => {}}
         filters={filters}

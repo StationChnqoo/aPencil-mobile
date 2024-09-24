@@ -11,7 +11,7 @@ interface MyProps {
 const SafeArea: React.FC<MyProps> = props => {
   const {children, isAvoidBottomSpace} = props;
   const STATUS_BAR_HEIGHT = Platform.select({
-    android: StatusBar.currentHeight,
+    android: 0,
     ios: useSafeAreaInsets().top,
   });
   const BOTTOM_SPACE_HEIGHT = useSafeAreaInsets().bottom;

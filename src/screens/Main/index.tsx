@@ -3,10 +3,10 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {useCaches} from '@src/stores';
 import React from 'react';
 import {Image} from 'react-native';
-import Courses from '../Courses';
 import Home from '../Home';
 import My from '../My';
 import Words from '../Words';
+import Notes from '../Notes';
 
 const Tab = createBottomTabNavigator();
 
@@ -19,10 +19,10 @@ function MainScreen() {
       label: '首页',
     },
     {
-      name: 'Courses',
-      component: Courses,
-      icon: require('./assets/menu_course.png'),
-      label: '课程',
+      name: 'Notes',
+      component: Notes,
+      icon: require('./assets/menu_notes.png'),
+      label: '日记',
     },
     {
       name: 'Words',

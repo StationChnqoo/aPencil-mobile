@@ -29,3 +29,10 @@ export interface CourseWord {
   jp?: string;
   en?: string;
 }
+
+export interface NoteTag {
+  id: string;
+  label: string;
+  value?: string;
+  checked: boolean;
+}

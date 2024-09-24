@@ -1,11 +1,10 @@
-import React, {useState} from 'react';
-import {FlatList, Platform, StatusBar, StyleSheet, View} from 'react-native';
+import React, { useState } from 'react';
+import { FlatList, StyleSheet, View } from 'react-native';
 
 import MarketItem from '@src/components/MarketItem';
-import {RootStacksProp} from '..';
-import Tabs from './components/Tabs';
-import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import SafeArea from '@src/components/SafeArea';
+import { RootStacksProp } from '..';
+import Tabs from './components/Tabs';
 
 interface MyProps {
   navigation?: RootStacksProp;
